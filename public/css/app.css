@@ -1,0 +1,431 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html {
+     font-family: 'Montserrat', sans-serif;
+     overflow-x: hidden;
+}
+
+.loading-screen {
+     height: 100vh;
+     width: 100vw;
+     position: fixed;
+     z-index: 12;
+     display: block;
+     background-color: rgb(95, 38, 31);
+     background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+button {
+     cursor: pointer;
+}
+
+button:focus {
+     outline: none;
+}
+
+a:focus {
+     border: 0;
+     outline: none;
+}
+
+.page-header {
+     background: #f16150;
+     padding: 20px 0 20px 0;
+     width: 100vw;
+     position: fixed;
+     top: 0;
+     transform: translateY(0);
+     color: #FFFFFF;
+     z-index: 10;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.header-wrapper {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+}
+
+h1 {
+     font-size: 2.5rem;
+     padding: 15px 0 15px 0;
+     cursor: pointer;
+}
+
+.nav-btn {
+     height: 50px;
+     width: 75px;
+     background: transparent;
+     border: 0;
+     color: #FFFFFF;
+     text-transform: uppercase;
+     border: 1px solid #235137;
+     border-radius: 20%;
+}
+
+.nav-list {
+     list-style-type: none;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+}
+
+
+.nav-list-items {
+     font-weight: bold;
+     font-size: 1.7rem;
+     color: #FFFFFF;
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+}
+
+.nav-list-items li {
+     text-align: center;
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     flex-grow: 0;
+     flex-shrink: 0;
+}
+
+section {
+     width: 100vw;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px 0 20px 0
+}
+
+.intro-section {
+     color: #FFFFFF;
+     min-height: 100vh;
+     background: rgba(0, 0, 0, .5);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 160px 80px 25px 80px;
+     position: relative;
+}
+
+.intro-section::before {
+     content: '';
+     min-height: 100%;
+     z-index: -1;
+     width: 100%;
+     background: url(/image/background2.jpg) no-repeat;
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+.intro-container .page-logo {
+     width: 250px;
+     height: 250px;
+     border-radius: 50%;
+}
+
+.section-title {
+     padding: 20px 0 20px 0;
+     font-size: 6rem;
+     text-transform: uppercase;
+     text-align: center;
+}
+
+.section-paragraph {
+     padding: 15px 0 15px 0;
+     font-size: 2rem;
+     color: #FFFFFF;
+     text-align: justify;
+}
+
+.topology-icon {
+     width: 50%;
+     margin: 15px 0 15px 0;
+}
+
+.link-holder {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.link-description {
+     font-size: 1.2rem;
+}
+
+.image-container {
+     height: 100%;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.image-holder a {
+     width: 100%;
+}
+
+.image-container .exercise-img {
+     max-width: 100%;
+}
+
+.image-container img {
+	border-radius: 75%;
+}
+
+.about-section {
+     background-color: #f16150;
+     color: #FFFFFF;
+}
+
+.wrapper {
+     padding: 30px 0 15px 0;
+}
+
+.form-container {
+     display: flex;
+     flex-direction: column;
+     padding: 0 15px 0 15px;
+     width: 100%;
+}
+
+.form-container input,
+textarea {
+     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+     border: none;
+     width: 100%;
+     padding: 30px 0 30px 0;
+     border-bottom: 1px solid #989898;
+     font-size: 1.7rem;
+}
+
+.form-container textarea {
+     resize: none;
+     font-size: 1.7rem;
+     height: 20vh;
+}
+
+.form-container input,
+textarea:focus {
+     outline: none;
+}
+
+.form-button {
+     color: #FFFFFF;
+     background: #002530;
+     font-size: 1.7rem;
+     border: none;
+     padding: 15px 30px 15px 30px;
+     border-radius: 5px;
+}
+
+footer {
+     background: #f16150;
+     color: #FFFFFF;
+     text-align: center;
+     padding: 15px 0 15px 0;
+}
+
+@media screen and (min-width: 280px) {
+     html {
+          font-size: 37%;
+     }
+
+     .container {
+          width: 260px;
+     }
+
+     .header-wrapper {
+          width: 260px;
+          padding-right: 15px;
+     }
+
+     .exercises-section .image-container .link-holder {
+          width: 100%;
+          padding: 15px 15px 15px 15px;
+     }
+
+     .about-section .image-container .link-holder {
+          width: 50%;
+          padding: 15px 15px 15px 15px;
+     }
+
+     .link-description {
+          width: calc(100% - 30px);
+          height: calc(100% - 30px);
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background: rgba(0, 37, 48, .5);
+          color: #FFFFFF;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: justify;
+          padding: 0 10px 40px 10px
+     }
+
+     h1 {
+          padding-left: 15px;
+     }
+
+     .active {
+          display: flex;
+     }
+
+     .page-nav {
+          align-items: center;
+          width: 100%;
+          padding: 0 15px 0 15px;
+          justify-content: center;
+     }
+
+     .page-nav:not(.active) {
+          display: none;
+     }
+
+     .nav-list {
+          flex-direction: column;
+     }
+
+     .nav-list-items {
+          margin: 5px 0 5px 0;
+     }
+
+     .nav-btn {
+          display: block;
+     }
+
+     /* .nav-list-items {
+          padding-right: 25px;
+     } */
+}
+
+@media screen and (min-width: 340px) {
+     html {
+          font-size: 40%;
+     }
+
+     .container {
+          width: 320px;
+     }
+
+     .header-wrapper {
+          width: 320px;
+     }
+}
+
+@media screen and (min-width: 560px) {
+     html {
+          font-size: 45%;
+     }
+
+     .container {
+          width: 540px;
+     }
+
+     .header-wrapper {
+          width: 540px;
+     }
+}
+
+@media screen and (min-width: 780px) {
+     html {
+          font-size: 50%;
+     }
+
+     .container {
+          width: 760px;
+     }
+
+     .header-wrapper {
+          width: 760px;
+          padding-right: 0;
+     }
+
+     .exercises-section .image-container .link-holder {
+          width: 50%;
+     }
+
+     .about-section .image-container .link-holder {
+          width: 25%;
+     }
+
+     .link-description {
+          width: calc(100% - 30px);
+          height: calc(100% - 30px);
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          text-align: justify;
+          transition: .5s ease;
+          opacity: 0;
+     }
+
+     .link-description:hover {
+          transition: .5s;
+          opacity: 1;
+     }
+
+     .page-nav:not(.active) {
+          display: flex;
+     }
+
+     .page-nav {
+          display: flex;
+          align-items: center;
+          width: auto;
+     }
+
+     .nav-list {
+          flex-direction: row;
+     }
+
+     .nav-btn {
+          display: none;
+     }
+
+     .nav-list-items {
+          padding-right: 25px;
+          margin: 0;
+     }
+
+     .nav-list-items:last-child {
+          padding-right: 0;
+     }
+}
+
+@media screen and (min-width: 980px) {
+     html {
+          font-size: 62.5%;
+     }
+
+     .container {
+          width: 950px;
+     }
+
+     .header-wrapper {
+          width: 950px;
+     }
+
+     .exercises-section .image-container .link-holder {
+          width: 33.33%;
+     }
+}
